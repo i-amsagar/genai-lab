@@ -95,6 +95,29 @@ Explore different prompting techniques:
 - ✅ Chain-of-Thought Prompting → `chat_3.py`
 - ✅ OpenAI Chat Example → `chat_1.py`
 
+**Day 3: Create agents**
+
+- `gym_agent.py`: Provides fitness and gym-related advice.
+- `weather_agent.py`: Retrieves and provides weather information.
+
+**Day 4: Run LLM on local machine**
+
+- Runing a Large Language Model (LLM) locally using Docker, FastAPI, and Ollama. This setup will allow you to interact with the LLM via an API, which you can access through FastAPI’s interactive docs.
+- `docker-compose.yml`: Defines the Docker configuration for the Ollama service.
+- `ollama_api.py`: FastAPI app that exposes the LLM API.
+
+```bash
+pip install uvicorn fastapi ollama
+```
+
+```bash
+docker compose up
+python ollama_api.py
+uvicorn ollama_api:app --port 8000
+```
+
+- Open fastapi docs : http://127.0.0.1:8000/docs
+
 ## ✅ Tips
 
 - Always keep your `.env` file in `.gitignore` to protect your API keys.
