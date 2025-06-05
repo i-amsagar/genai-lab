@@ -80,7 +80,7 @@ GOOGLE_API_KEY=your_google_api_key_here
 
 ## 🧪 Prompt Engineering
 
-**Day 2: Mastering Prompting Techniques**
+# 📅 Day 2: Mastering Prompting Techniques
 
 ### Install Google Generative AI SDK:
 
@@ -95,12 +95,14 @@ Explore different prompting techniques:
 - ✅ Chain-of-Thought Prompting → `chat_3.py`
 - ✅ OpenAI Chat Example → `chat_1.py`
 
-**Day 3: Create agents**
+# 📅 Day 3: Create agents
 
 - `gym_agent.py`: Provides fitness and gym-related advice.
 - `weather_agent.py`: Retrieves and provides weather information.
 
-**Day 4: Run LLM on local machine**
+# 📅 Day 4: Run LLM on local machine
+
+## 🎯 Objective
 
 - Runing a Large Language Model (LLM) locally using Docker, FastAPI, and Ollama. This setup will allow you to interact with the LLM via an API, which you can access through FastAPI’s interactive docs.
 - `docker-compose.yml`: Defines the Docker configuration for the Ollama service.
@@ -117,6 +119,51 @@ uvicorn ollama_api:app --port 8000
 ```
 
 - Open fastapi docs : http://127.0.0.1:8000/docs
+
+# 📅 Day 5: RAG - Retrieval Augmented Generation
+
+## 🎯 Objective
+
+Enhance LLM responses using **RAG (Retrieval Augmented Generation)** by injecting relevant data into the prompt.
+
+## 📦 Dependencies & Setup
+
+### 1. 🔍 PyPDFLoader
+
+- Used to load and parse PDF documents.
+
+```bash
+pip install langchain_community pypdf
+```
+
+### 2. 🔍 Text splitters
+
+- Text splitters split documents into smaller chunks for use in downstream applications.
+
+```bash
+pip install langchain_text_splitters
+```
+
+### 3. 🔍 Embedding model
+
+- create a vector representation of a piece of text
+- OpenAIEmbeddings : use this model
+
+```bash
+pip install langchain-openai
+```
+
+### 4. 🔍 Qdrant
+
+- docker-compose.db.yml
+
+```bash
+docker compose -f docker-compose.db.yml up
+```
+
+- open and check
+  . http://localhost:6333/
+  . http://localhost:6333/dashboard
 
 ## ✅ Tips
 
