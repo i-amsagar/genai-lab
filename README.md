@@ -162,8 +162,14 @@ docker compose -f docker-compose.db.yml up
 ```
 
 - open and check
-  . http://localhost:6333/
-  . http://localhost:6333/dashboard
+  http://localhost:6333/
+  http://localhost:6333/dashboard
+
+- LangChain Qdrant : is a vector similarity search engine. It provides a production-ready service with a convenient API to store, search, and manage vectors with additional payload and extended filtering support
+
+```bash
+pip install langchain-qdrant
+```
 
 ## ✅ Tips
 
